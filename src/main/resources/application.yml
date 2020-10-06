@@ -1,0 +1,13 @@
+app-stacktrace-enable:  false
+spring:
+  application:
+    name: ex-rest-template
+    nameth: ทดสอบ
+build:
+  version: 0.0.1    
+logging:
+  pattern:
+    console:  '[%-8(%X{LOG_TYPE})] %d{yyyy-MM-dd HH:mm:ss} ${LOG_LEVEL_PATTERN} [${spring.application.nameth},${build.version}] [%X{CLIENT_IP}] [%X{USER_NAME}] [%X{OAUTH_CLIENT_ID}] [%M\(%F:%L\)] : %msg%n'
+  level:
+    root: info
+    com.agazin.exresttemplate: debug
